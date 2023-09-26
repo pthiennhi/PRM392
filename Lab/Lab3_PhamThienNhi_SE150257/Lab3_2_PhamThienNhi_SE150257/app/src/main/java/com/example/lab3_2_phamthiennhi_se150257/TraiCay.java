@@ -1,11 +1,13 @@
 package com.example.lab3_2_phamthiennhi_se150257;
 
+import android.graphics.Bitmap;
+
 public class TraiCay {
     private String Ten, Mota;
-    private int Hinh;
+    private Bitmap Hinh;
 
 
-    public TraiCay(String ten, String mota, int hinh) {
+    public TraiCay(String ten, String mota, Bitmap hinh) {
         this.Ten = ten;
         this.Mota = mota;
         this.Hinh = hinh;
@@ -27,11 +29,11 @@ public class TraiCay {
         this.Mota = mota;
     }
 
-    public int getHinh() {
+    public Bitmap getHinh() {
         return this.Hinh;
     }
 
-    public void setHinh(int hinh) {
+    public void setHinh(Bitmap hinh) {
         this.Hinh = hinh;
     }
 }

@@ -1,6 +1,7 @@
 package com.example.lab3_2_phamthiennhi_se150257;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -48,7 +49,10 @@ public class TraiCayAdapter extends BaseAdapter {
         TraiCay traiCay = traiCayList.get(i);
         tvTen.setText(traiCay.getTen());
         tvMota.setText(traiCay.getMota());
-        imgHinh.setImageResource(traiCay.getHinh());
+        Bitmap bitmap = traiCay.getHinh();
+        if (bitmap != null) {
+            imgHinh.setImageBitmap(bitmap);
+        }
 
         return view;
     }
