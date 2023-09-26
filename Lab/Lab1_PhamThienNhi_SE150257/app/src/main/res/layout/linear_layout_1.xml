@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="#FFEB3B"
+        android:text="Android"
+        android:textSize="35dp"
+        android:textColor="#F44336" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:background="#60B5FA"
+        android:text="PHP"
+        android:textSize="35dp"
+        android:textColor="#A11207" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:background="#009688"
+        android:text="SQL"
+        android:textSize="35dp"
+        android:textColor="#FFEB3B" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#F6CA47"
+        android:text="PYTHON"
+        android:textSize="35dp"
+        android:textColor="#08808F" />
+
+
+</LinearLayout>
