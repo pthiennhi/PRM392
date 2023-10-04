@@ -66,7 +66,11 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     arrayCourse.add(newCourse);
                     arrayAdapter.notifyDataSetChanged();
-
+                    position = -1;
+                    editText.clearFocus();
+                    InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                    imm.hideSoftInputFromWindow(editText.getWindowToken(), 0);
+                    editText.setText("");
                 }
 
             }

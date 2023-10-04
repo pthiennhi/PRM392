@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical"
+  android:layout_gravity="center"
+  android:gravity="center"
+  android:background="#FFCDD2"
+  tools:context=".SecondActivity">
+  <TextView
+    android:id="@+id/txtString"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="20sp"
+    />
+  <TextView
+    android:id="@+id/txtNumber"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="20sp" />
+  <TextView
+    android:id="@+id/txtArray"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="20sp" />
+  <TextView
+    android:id="@+id/txtObject"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="20sp" />
+  <TextView
+    android:id="@+id/txtBundle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="20sp" />
+  <Button
+    android:id="@+id/buttonSecond"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textStyle="bold"
+    android:text="Main Activity" />
+
+</LinearLayout>
