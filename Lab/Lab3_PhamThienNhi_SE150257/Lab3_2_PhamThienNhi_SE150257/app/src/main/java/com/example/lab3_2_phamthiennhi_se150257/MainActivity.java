@@ -2,29 +2,24 @@ package com.example.lab3_2_phamthiennhi_se150257;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
+import android.os.Bundle;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.Toast;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.os.Bundle;
-import android.widget.ListView;
-
 import androidx.core.content.ContextCompat;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
-import java.lang.reflect.Field;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -76,8 +71,7 @@ public class MainActivity extends AppCompatActivity {
     });
     lvtraicay.setOnItemClickListener((adapterView, view, i, l) -> {
       position = i;
-      TraiCay traiCay = arrayTraicay.get(i);
-      edtTen.setText(traiCay.getTen());
+      TraiCay traiCay = arrayTraicay.get(i);edtTen.setText(traiCay.getTen());
       edtMota.setText(traiCay.getMota());
       imgHinh.setImageBitmap(traiCay.getHinh());
     });
@@ -93,9 +87,6 @@ public class MainActivity extends AppCompatActivity {
         } else if (checkExist(ten)) {
           Toast.makeText(MainActivity.this, "Tên trái cây đã tồn tại", Toast.LENGTH_SHORT).show();
         } else {
-          if(position == -1){
-            imgHinh.setImageBitmap(selectedImage);
-          }
           selectedImage = ((BitmapDrawable) imgHinh.getDrawable()).getBitmap();
           if (selectedImage == null) {
             selectedImage = BitmapFactory.decodeResource(getResources(), R.drawable.no_image);
