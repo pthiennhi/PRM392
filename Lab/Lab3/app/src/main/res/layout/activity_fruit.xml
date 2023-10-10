@@ -28,7 +28,7 @@
         android:layout_weight="1"
         android:layout_gravity="center"
         android:layout_marginHorizontal="20dp"
-        android:background="#BBDEFB"
+        android:backgroundTint="#81C784"
         android:text="Import image" />
     </LinearLayout>
 
@@ -64,7 +64,7 @@
         android:layout_weight="1"
         android:layout_gravity="center"
         android:layout_marginHorizontal="5dp"
-        android:background="#BBDEFB"
+        android:backgroundTint="#4FC3F7"
         android:text="Thêm" />
       <Button
         android:id="@+id/btnUpdate"
@@ -73,7 +73,7 @@
         android:layout_weight="1"
         android:layout_gravity="center"
         android:layout_marginHorizontal="5dp"
-        android:background="#D1C4E9"
+        android:backgroundTint="#BA68C8"
         android:text="Sửa" />
       <Button
         android:id="@+id/btnDelete"
@@ -82,7 +82,7 @@
         android:layout_weight="1"
         android:layout_gravity="center"
         android:layout_marginHorizontal="5dp"
-        android:background="#FFCCBC"
+        android:backgroundTint="#E57373"
         android:text="Xoá" />
     </LinearLayout>
 

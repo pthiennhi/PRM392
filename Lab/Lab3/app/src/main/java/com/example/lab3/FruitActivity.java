@@ -224,10 +224,10 @@ public class FruitActivity extends AppCompatActivity {
     Bitmap appleBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.apple);
     Bitmap bananaBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.banana);
     Bitmap blueberryBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.blueberry);
-    arrayTraicay.add(new TraiCay("Apple", "Apple... some description goes here", appleBitmap));
-    arrayTraicay.add(new TraiCay("Banana", "Banana... some description goes here", bananaBitmap));
+    arrayTraicay.add(new TraiCay("Apple", "Đây là táo envy từ nước Úc, trái ngon ngọt, bổ dưỡng", appleBitmap));
+    arrayTraicay.add(new TraiCay("Banana", "Chuối vàng Mỹ, quả dài, ngọt, có màu vàng bắt mắt, vị ngọt bùi.", bananaBitmap));
     arrayTraicay.add(
-        new TraiCay("Blueberry", "Blueberry... some description goes here", blueberryBitmap));
+        new TraiCay("Blueberry", "Blue Berry Thuỵ Sỹ, quả mọng có vị chua ngọt, dùng để làm nước ép hoặc sinh tố rất tốt cho sức khoẻ.", blueberryBitmap));
   }
 
   private void Binding() {

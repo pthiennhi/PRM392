@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".FootballPlayerActivity">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="20dp"
+    android:orientation="vertical">
+    <EditText
+      android:id="@+id/editTextTextAvatar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:ems="10"
+      android:textSize="20sp"
+      android:hint="Avatar Image Link"
+      android:inputType="text"
+       />
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+      <EditText
+        android:id="@+id/editTextTextTenCauThu2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textSize="20sp"
+        android:hint="Footballer name"
+        android:inputType="text"
+         />
+      <EditText
+        android:id="@+id/editTextTextNgaySinhCauThu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textSize="20sp"
+        android:hint="Birth Date"
+        android:inputType="text"
+         />
+    </LinearLayout>
+
+    <EditText
+      android:id="@+id/editTextTextCountry"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:ems="10"
+      android:hint="Country Image Link"
+      android:inputType="text" />
+    <Button
+      android:id="@+id/buttonClearInput"
+      android:layout_width="100sp"
+      android:layout_height="wrap_content"
+      android:padding="0sp"
+      android:layout_gravity="end"
+      android:backgroundTint="#4FC3F7"
+      android:text="Clear" />
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginVertical="5dp"
+      android:orientation="horizontal">
+      <Button
+        android:id="@+id/buttonAddCauthu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="5dp"
+        android:backgroundTint="#4DB6AC"
+        android:text="Thêm" />
+      <Button
+        android:id="@+id/buttonUpdateCauThu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="5dp"
+        android:backgroundTint="#9575CD"
+        android:text="Sửa" />
+      <Button
+        android:id="@+id/buttonDeleteCauThu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="5dp"
+        android:backgroundTint="#E57373"
+        android:text="Xoá" />
+    </LinearLayout>
+
+    <ListView
+      android:id="@+id/ListViewCauThu"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginVertical="5dp"/>
+  </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

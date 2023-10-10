@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import java.util.Date;
 import java.util.Random;
@@ -26,38 +27,46 @@ public class RandomGeneratorActivity extends AppCompatActivity {
       public void onClick(View view) {
         String textMin = editTextMin.getText().toString();
         String textMax = editTextMax.getText().toString();
-        Integer min = 1;
-        Integer max = 100;
-        Integer resultRandom;
-        if (!checkEmptyInput(textMin)) {
-          min = Integer.parseInt(textMin);
-        } else {
-          editTextMin.setText("1");
-          min = 1;
+
+        if(checkLengthDigits(textMin, textMax)){
+          Integer min = 1;
+          Integer max = 100;
+          Integer resultRandom;
+          if (!checkEmptyInput(textMin)) {
+            min = Integer.parseInt(textMin);
+          } else {
+            editTextMin.setText("1");
+            min = 1;
+          }
+          if (!checkEmptyInput(textMax)) {
+            max = Integer.parseInt(textMax);
+          } else {
+            editTextMax.setText("100");
+            max = 100;
+          }
+          if (min >= max) {
+            max = min + 1;
+            editTextMax.setText(max.toString());
+          }
+          Random random = new Random();
+          resultRandom = random.nextInt(max - min + 1) + min;
+          result.setTextSize(20);
+          result.setText(resultRandom.toString());
+
+          String textMinMax = "Min: " + min + ", " + "Max: " + max;
+          min_max.setTextSize(16);
+          min_max.setText(textMinMax);
+
+          Date date = new Date();
+          time.setTextSize(16);
+          time.setText(date.toString());
+
+
         }
-        if (!checkEmptyInput(textMax)) {
-          max = Integer.parseInt(textMax);
-        } else {
-          editTextMax.setText("100");
-          max = 100;
-        }
-        if (min >= max) {
-          max = min + 1;
-          editTextMax.setText(max.toString());
+        else {
+          Toast.makeText(RandomGeneratorActivity.this, "Please input number less than 6 digits", Toast.LENGTH_SHORT).show();
         }
 
-        Random random = new Random();
-        resultRandom = random.nextInt(max - min + 1) + min;
-        result.setTextSize(20);
-        result.setText(resultRandom.toString());
-
-        String textMinMax = "Min: " + min + ", " + "Max: " + max;
-        min_max.setTextSize(16);
-        min_max.setText(textMinMax);
-
-        Date date = new Date();
-        time.setTextSize(16);
-        time.setText(date.toString());
 
       }
     });
@@ -74,6 +83,17 @@ public class RandomGeneratorActivity extends AppCompatActivity {
 
   private boolean checkEmptyInput(String input) {
     return input.length() == 0;
+  }
+
+  private boolean checkLengthDigits(String num1, String num2){
+    boolean check = false;
+    if(num1.length() >6 || num2.length() >6 ){
+      check = false;
+    }
+    else {
+      check = true;
+    }
+    return check;
   }
 
 }

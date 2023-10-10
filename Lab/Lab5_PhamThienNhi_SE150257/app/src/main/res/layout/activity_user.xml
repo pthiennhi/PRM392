@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:layout_margin="20sp"
+  tools:context=".UserActivity">
+  <LinearLayout
+    android:id="@+id/llUser"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+    <EditText
+      android:id="@+id/edtUsername"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="10sp"
+      android:hint="Nhập username..."
+
+       />
+    <EditText
+      android:id="@+id/edtFullname"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="10sp"
+      android:hint="Nhập fullname..."
+      />
+    <EditText
+      android:id="@+id/edtEmail"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="10sp"
+      android:hint="Nhập email..."
+      />
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:weightSum="3"
+      android:orientation="horizontal">
+      <Button
+        android:layout_width="0sp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10sp"
+        android:backgroundTint="#64B5F6"
+        android:text="Thêm"
+        android:id="@+id/btnAdd" />
+      <Button
+        android:layout_width="0sp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10sp"
+        android:backgroundTint="#9575CD"
+        android:text="Sửa"
+        android:id="@+id/btnEdit" />
+      <Button
+        android:layout_width="0sp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10sp"
+        android:backgroundTint="#E57373"
+        android:text="Xóa"
+        android:id="@+id/btnDelete" />
+    </LinearLayout>
+  </LinearLayout>
+  <androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/rvUser"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20sp"
+    android:paddingBottom="40sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/llUser" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

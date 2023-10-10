@@ -23,20 +23,26 @@ public class CalculatorActivity extends AppCompatActivity {
       public void onClick(View view) {
         String txtNumber1 = editTextNumber1.getText().toString();
         String txtNumber2 = editTextNumber2.getText().toString();
-        if (!txtNumber1.isEmpty() && !txtNumber2.isEmpty()) {
-          try {
-            Integer num1 = Integer.parseInt(txtNumber1);
-            Integer num2 = Integer.parseInt(txtNumber2);
-            Integer resultAdd = num1 + num2;
-            result.setTextSize(16);
-            result.setText(resultAdd.toString());
-          } catch (NumberFormatException e) {
-            // Handle the case where the input is not a valid integer
+        if(checkLengthDigits(txtNumber1, txtNumber2)){
+          if (!txtNumber1.isEmpty() && !txtNumber2.isEmpty()) {
+            try {
+              Integer num1 = Integer.parseInt(txtNumber1);
+              Integer num2 = Integer.parseInt(txtNumber2);
+              Integer resultAdd = num1 + num2;
+              result.setTextSize(24);
+              result.setText(resultAdd.toString());
+            } catch (NumberFormatException e) {
+              // Handle the case where the input is not a valid integer
+              showToast("Input number");
+            }
+
+          } else {
             showToast("Input number");
           }
 
-        } else {
-          showToast("Input number");
+        }
+        else {
+          showToast("Please input number less than 6 digits");
         }
       }
     });
@@ -46,21 +52,26 @@ public class CalculatorActivity extends AppCompatActivity {
       public void onClick(View view) {
         String txtNumber1 = editTextNumber1.getText().toString();
         String txtNumber2 = editTextNumber2.getText().toString();
-        if (!txtNumber1.isEmpty() && !txtNumber2.isEmpty()) {
-          try {
-            Integer num1 = Integer.parseInt(txtNumber1);
-            Integer num2 = Integer.parseInt(txtNumber2);
-            Integer resultMinus = num1 - num2;
-            result.setTextSize(16);
-            result.setText(resultMinus.toString());
-          } catch (NumberFormatException e) {
-            // Handle the case where the input is not a valid integer
+        if(checkLengthDigits(txtNumber1, txtNumber2)){
+          if (!txtNumber1.isEmpty() && !txtNumber2.isEmpty()) {
+            try {
+              Integer num1 = Integer.parseInt(txtNumber1);
+              Integer num2 = Integer.parseInt(txtNumber2);
+              Integer resultMinus = num1 - num2;
+              result.setTextSize(24);
+              result.setText(resultMinus.toString());
+            } catch (NumberFormatException e) {
+              // Handle the case where the input is not a valid integer
+              showToast("Input number");
+            }
+
+          } else {
             showToast("Input number");
           }
-
-        } else {
-          showToast("Input number");
+        }else {
+          showToast("Please input number less than 6 digits");
         }
+
       }
     });
     btnMultiple.setOnClickListener(new View.OnClickListener() {
@@ -68,21 +79,26 @@ public class CalculatorActivity extends AppCompatActivity {
       public void onClick(View view) {
         String txtNumber1 = editTextNumber1.getText().toString();
         String txtNumber2 = editTextNumber2.getText().toString();
-        if (!txtNumber1.isEmpty() && !txtNumber2.isEmpty()) {
-          try {
-            Integer num1 = Integer.parseInt(txtNumber1);
-            Integer num2 = Integer.parseInt(txtNumber2);
-            Integer resultMinus = num1 * num2;
-            result.setTextSize(16);
-            result.setText(resultMinus.toString());
-          } catch (NumberFormatException e) {
-            // Handle the case where the input is not a valid integer
+        if(checkLengthDigits(txtNumber1,txtNumber2)){
+          if (!txtNumber1.isEmpty() && !txtNumber2.isEmpty()) {
+            try {
+              Integer num1 = Integer.parseInt(txtNumber1);
+              Integer num2 = Integer.parseInt(txtNumber2);
+              Integer resultMinus = num1 * num2;
+              result.setTextSize(24);
+              result.setText(resultMinus.toString());
+            } catch (NumberFormatException e) {
+              // Handle the case where the input is not a valid integer
+              showToast("Input number");
+            }
+
+          } else {
             showToast("Input number");
           }
-
-        } else {
-          showToast("Input number");
+        }else {
+          showToast("Please input number less than 6 digits");
         }
+
       }
     });
     btnDivide.setOnClickListener(new View.OnClickListener() {
@@ -90,25 +106,29 @@ public class CalculatorActivity extends AppCompatActivity {
       public void onClick(View view) {
         String txtNumber1 = editTextNumber1.getText().toString();
         String txtNumber2 = editTextNumber2.getText().toString();
+        if(checkLengthDigits(txtNumber1, txtNumber2)){
+          if (!txtNumber1.isEmpty() && !txtNumber2.isEmpty()) {
+            try {
+              Float num1 = Float.parseFloat(txtNumber1);
+              Float num2 = Float.parseFloat(txtNumber2);
 
-        if (!txtNumber1.isEmpty() && !txtNumber2.isEmpty()) {
-          try {
-            Float num1 = Float.parseFloat(txtNumber1);
-            Float num2 = Float.parseFloat(txtNumber2);
-
-            if (num2 == 0) {
-              showToast("Cannot divide by zero");
-            } else {
-              Float resultDivide = num1 / num2;
-              result.setTextSize(16);
-              result.setText(resultDivide.toString());
+              if (num2 == 0) {
+                showToast("Cannot divide by zero");
+              } else {
+                Float resultDivide = num1 / num2;
+                result.setTextSize(24);
+                result.setText(resultDivide.toString());
+              }
+            } catch (NumberFormatException e) {
+              showToast("Input number");
             }
-          } catch (NumberFormatException e) {
+          } else {
             showToast("Input number");
           }
-        } else {
-          showToast("Input number");
+        }else {
+          showToast("Please input number less than 6 digits");
         }
+
       }
     });
   }
@@ -129,5 +149,16 @@ public class CalculatorActivity extends AppCompatActivity {
 
   private void showToast(String msg) {
     Toast.makeText(this, msg, Toast.LENGTH_LONG).show();
+  }
+
+  private boolean checkLengthDigits(String num1, String num2){
+    boolean check = false;
+    if(num1.length() >6 || num2.length() >6 ){
+      check = false;
+    }
+    else {
+      check = true;
+    }
+    return check;
   }
 }

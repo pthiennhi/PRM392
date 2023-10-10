@@ -43,6 +43,16 @@
       android:backgroundTint="#64B5F6"
       android:text="Fruit List View" />
 
+    <Button
+      android:id="@+id/btnLab3_3"
+      android:layout_width="230sp"
+      android:layout_height="wrap_content"
+      android:paddingVertical="15sp"
+      android:layout_gravity="center_horizontal"
+      android:layout_marginTop="20dp"
+      android:backgroundTint="#FFB74D"
+      android:text="Football Player List View" />
+
 
 
   </LinearLayout>

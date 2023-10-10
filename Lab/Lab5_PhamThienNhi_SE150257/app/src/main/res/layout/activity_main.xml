@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".MainActivity">
+
+  <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:layout_marginTop="72dp"
+    android:orientation="vertical"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textView">
+
+    <Button
+      android:id="@+id/btnLab5_1"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="20sp"
+      android:paddingHorizontal="40sp"
+      android:paddingVertical="10sp"
+      android:backgroundTint="#64B5F6"
+      android:layout_marginBottom="40dp"
+      android:text="Recycle View" />
+    <Button
+      android:id="@+id/btnLab5_2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="20sp"
+      android:paddingHorizontal="40sp"
+      android:paddingVertical="10sp"
+      android:backgroundTint="#F06292"
+      android:layout_marginBottom="40dp"
+      android:text="Modules Application" />
+
+  </LinearLayout>
+  <TextView
+    android:id="@+id/textView"
+    android:textStyle="bold"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="100dp"
+    android:text="Lab 5 - Pham Thien Nhi"
+    android:textSize="24sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

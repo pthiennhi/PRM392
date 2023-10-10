@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".ModuleActivity">
+  <LinearLayout
+    android:id="@+id/llMolude"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="10"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    >
+    <ImageView
+      android:id="@+id/iv_image"
+      android:layout_width="80sp"
+      android:layout_height="80sp"
+      android:layout_margin="10sp"
+      android:src="@drawable/ic_launcher_background" />
+    <Button
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_margin="10sp"
+      android:backgroundTint="#64B5F6"
+      android:text="Chọn ảnh"
+      android:id="@+id/btnChooseImage" />
+
+  </LinearLayout>
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:weightSum="10"
+      android:orientation="horizontal"
+      android:gravity="center_vertical"
+      >
+      <EditText
+        android:id="@+id/edtTitle"
+        android:layout_width="0dp"
+        android:layout_weight="5"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10sp"
+        android:hint="Nhập Title..."
+
+        />
+      <EditText
+        android:id="@+id/edtTag"
+        android:layout_width="0dp"
+        android:layout_weight="5"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10sp"
+        android:hint="Nhập Tag..."
+        />
+
+    </LinearLayout>
+
+
+    <EditText
+      android:id="@+id/edtDescription"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="10sp"
+      android:hint="Nhập Description..."
+      />
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:weightSum="3"
+      android:orientation="horizontal">
+      <Button
+        android:layout_width="0sp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10sp"
+        android:backgroundTint="#64B5F6"
+        android:text="Thêm"
+        android:id="@+id/btnAdd1" />
+      <Button
+        android:layout_width="0sp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10sp"
+        android:backgroundTint="#9575CD"
+        android:text="Sửa"
+        android:id="@+id/btnEdit1" />
+      <Button
+        android:layout_width="0sp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10sp"
+        android:backgroundTint="#E57373"
+        android:text="Xóa"
+        android:id="@+id/btnDelete1" />
+    </LinearLayout>
+  </LinearLayout>
+  <androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/rvModule"
+    android:layout_width="match_parent"
+    android:layout_height="300sp"
+    android:layout_marginTop="20sp"
+    android:paddingBottom="40sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/llMolude" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
